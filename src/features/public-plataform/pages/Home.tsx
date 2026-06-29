@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { SiReact } from "react-icons/si";
-import { FaChartBar, FaLightbulb, FaHandsHelping, FaLock } from "react-icons/fa";
+import { FaChartBar, FaLightbulb, FaHandsHelping, FaLock, FaSearch, FaHeart, FaExclamationTriangle } from "react-icons/fa";
 
 export function Home(){
     const navigate = useNavigate();
@@ -14,8 +13,8 @@ export function Home(){
             <header className="bg-white shadow-sm sticky top-0 z-50">
                 <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
                     <div className="flex items-center gap-2">
-                        <SiReact className="text-3xl text-yellow-400" />
-                        <h1 className="text-xl font-bold text-yellow-500">Saúde Mental</h1>
+                        <FaHeart className="text-3xl text-yellow-400" />
+                        <h1 className="text-xl font-bold text-yellow-400">Saúde Mental</h1>
                     </div>
                     
                     {/* Menu Desktop */}
@@ -54,7 +53,7 @@ export function Home(){
                         Você não está sozinho.
                     </h2>
                     <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                        Encontre apoio emocional e psicológico gratuito ao acessível em Moçambique.
+                        Encontre apoio emocional e psicológico gratuito ou acessível em Moçambique.
                     </p>
 
                     {/* Illustration placeholder */}
@@ -69,7 +68,7 @@ export function Home(){
                         onClick={() => navigate('/situacao')}
                         className="w-full bg-yellow-400 text-white py-4 rounded-lg font-semibold hover:bg-yellow-600 transition flex items-center justify-center gap-2"
                     >
-                        <SiReact className="text-xl" />
+                        <FaSearch className="text-xl" />
                         Encontrar ajuda
                     </button>
 
@@ -77,7 +76,7 @@ export function Home(){
                         onClick={() => navigate('/ajudaUrgente')}
                         className="w-full bg-white border-2 border-yellow-500 text-gray-900 py-4 rounded-lg font-semibold hover:bg-yellow-50 transition flex items-center justify-center gap-2"
                     >
-                        <SiReact className="text-xl text-yellow-500" />
+                        <FaExclamationTriangle className="text-xl text-yellow-500" />
                         Preciso de ajuda urgente
                     </button>
                 </section>
@@ -125,7 +124,7 @@ export function Home(){
                         <div className="flex gap-4">
                             <FaLock className="text-3xl text-yellow-400 flex-shrink-0" />
                             <div>
-                                <h3 className="text-lg font-bold text-yellow-400 mb-2">Privado e seguro</h3>
+                                <h3 className="text-lg font-bold text-black-400 mb-2">Privado e seguro</h3>
                                 <p className="text-gray-700">Você pode navegar de forma totalmente anónimo. Seus dados estão protegidos com criptografia de ponta.</p>
                             </div>
                         </div>
